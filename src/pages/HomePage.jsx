@@ -45,7 +45,7 @@ const HomePage = () => {
       "https://chat-connect-backend-server.onrender.com",
       "http://localhost:8080",
     ];
-    const socketConection = io(url[1], {
+    const socketConection = io(url[0], {
       auth: {
         token: localStorage.getItem("token"),
       },
