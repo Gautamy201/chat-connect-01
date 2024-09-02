@@ -41,7 +41,11 @@ const HomePage = () => {
   const basePath = loction.pathname === "/";
 
   useEffect(() => {
-    const socketConection = io(import.meta.env.REACT_APP_BACKEND_URL, {
+    const url = [
+      "https://chat-connect-backend-server.onrender.com",
+      "http://localhost:8080",
+    ];
+    const socketConection = io(url[1], {
       auth: {
         token: localStorage.getItem("token"),
       },
