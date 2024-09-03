@@ -53,6 +53,7 @@ const HomePage = () => {
     });
 
     socketConection.on("onlineUser", (data) => {
+      console.log(data)
       dispatch(setOnlineUser(data));
     });
     dispatch(setSocketConnection(socketConection));
