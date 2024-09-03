@@ -59,7 +59,7 @@ const Sidebar = () => {
       <div
         className={`bg-brand w-20  sm:w-14 h-full rounded-tr-lg rounded-br-lg py-4 hover:text-primary flex flex-col justify-between items-center absolute sm:static top-0 ${
           openMenu ? "left-0" : "-left-20"
-        } z-20``}
+        } z-20`}
       >
         <button
           className={`absolute bg-brand text-xs px-1 py-4 rounded-tr-lg rounded-br-lg top-1/2 -translate-y-1/2 -right-6 pl-6 sm:hidden uppercase text-white`}
