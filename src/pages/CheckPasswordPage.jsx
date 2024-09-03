@@ -38,6 +38,7 @@ const CheckPasswordPage = () => {
       });
       toast.success(response.data.message);
       if (response.data.success) {
+        console.log("in Passord chek data => " ,response?.data?.token)
         dispatch(setToken(response?.data?.token));
         localStorage.setItem("token", response?.data?.token);
         setData({
