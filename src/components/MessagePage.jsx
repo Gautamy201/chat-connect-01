@@ -243,6 +243,7 @@ const MessagePage = () => {
                 imageVideoUrl={message.imageUrl}
               />
             )}
+            <div ref={currentMessage} />
           </div>
 
           {/*media file sub-tab */}
@@ -293,7 +294,6 @@ const MessagePage = () => {
             </div>
           )}
           {/*media file sub-tab */}
-          <div ref={currentMessage} />
         </section>
 
         {/* write a new message */}
@@ -324,7 +324,6 @@ const MessagePage = () => {
                 type="text"
                 placeholder="Type a message"
                 className="border w-full px-3 py-2 rounded outline-none focus:outline-primary"
-                autoFocus
                 onChange={(e) =>
                   setMessag((preve) => {
                     return {
