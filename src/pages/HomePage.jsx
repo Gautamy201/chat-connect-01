@@ -21,7 +21,7 @@ const HomePage = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const URL = `api/user-details`;
+      const URL = `${import.meta.env.REACT_APP_BACKEND_URL}api/user-details`;
       const response = await axios({
         url: URL,
         headers: {
