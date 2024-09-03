@@ -243,7 +243,6 @@ const MessagePage = () => {
                 imageVideoUrl={message.imageUrl}
               />
             )}
-            <div ref={currentMessage} />
           </div>
 
           {/*media file sub-tab */}
@@ -294,6 +293,7 @@ const MessagePage = () => {
             </div>
           )}
           {/*media file sub-tab */}
+          <div ref={currentMessage} />
         </section>
 
         {/* write a new message */}
