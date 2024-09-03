@@ -1,10 +1,9 @@
 import moment from "moment";
 import Avtar from "./Avtar";
 import { LiaCheckDoubleSolid } from "react-icons/lia";
-const Message = ({ mesg, currentMessage, user, userData }) => {
+const Message = ({ mesg, user, userData }) => {
   return (
     <div
-      ref={currentMessage}
       className={`w-full flex py-2 ${
         user._id === mesg.mesByUserId ? "justify-end" : " justify-start"
       }`}

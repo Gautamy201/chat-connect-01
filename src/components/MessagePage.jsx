@@ -105,6 +105,7 @@ const MessagePage = () => {
   };
   useEffect(() => {
     if (currentMessage.current) {
+      console.log(currentMessage.current);
       currentMessage.current.scrollIntoView({
         behavior: "smooth",
         block: "end",
@@ -195,7 +196,10 @@ const MessagePage = () => {
             backgroundSize: "calc(100vh - 128px) 100%",
           }}
         >
-          <div className="w-full h-full p-4 overflow-scroll bg-slate-900 bg-opacity-70 sm:px-10 ">
+          <div
+            className="w-full h-full p-4 overflow-scroll bg-slate-900 bg-opacity-70 sm:px-10"
+            ref={currentMessage}
+          >
             {/* show all message */}
 
             {allMessage.length === 0 && (
@@ -228,7 +232,6 @@ const MessagePage = () => {
                   <Message
                     key={index}
                     mesg={mesg}
-                    currentMessage={currentMessage}
                     user={user}
                     userData={userData}
                   />
