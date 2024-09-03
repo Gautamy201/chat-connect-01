@@ -196,10 +196,7 @@ const MessagePage = () => {
             backgroundSize: "calc(100vh - 128px) 100%",
           }}
         >
-          <div
-            className="w-full h-full p-4 overflow-scroll bg-slate-900 bg-opacity-70 sm:px-10"
-            ref={currentMessage}
-          >
+          <div className="w-full h-full p-4 overflow-scroll bg-slate-900 bg-opacity-70 sm:px-10">
             {/* show all message */}
 
             {allMessage.length === 0 && (
@@ -246,6 +243,7 @@ const MessagePage = () => {
                 imageVideoUrl={message.imageUrl}
               />
             )}
+            <div ref={currentMessage} />
           </div>
 
           {/*media file sub-tab */}
