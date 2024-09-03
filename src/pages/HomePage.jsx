@@ -17,12 +17,11 @@ const HomePage = () => {
   const loction = useLocation();
 
   const user = useSelector((state) => state.user);
-  console.log(user)
+  console.log(user);
 
   const fetchUserDetails = async () => {
-
     try {
-      const URL = `${import.meta.env.REACT_APP_BACKEND_URL}api/user-details`;
+      const URL = `api/user-details`;
       const response = await axios({
         url: URL,
         headers: {
@@ -30,7 +29,7 @@ const HomePage = () => {
         },
         withCredentials: true,
       });
-      console.log("fetch user detail => " , response?.data?.data)
+      console.log("fetch user detail => ", response?.data?.data);
       dispatch(setUser(response?.data?.data));
       if (response?.data?.logout) {
         dispatch(logout());
@@ -58,7 +57,7 @@ const HomePage = () => {
     });
 
     socketConection.on("onlineUser", (data) => {
-      console.log(data)
+      console.log(data);
       dispatch(setOnlineUser(data));
     });
     dispatch(setSocketConnection(socketConection));

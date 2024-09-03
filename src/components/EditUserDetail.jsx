@@ -44,6 +44,9 @@ const EditUserDetail = ({ data, setEditSectionOpen }) => {
       const response = await axios({
         method: "post",
         url: URL,
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
         data: {
           profile_Pic: uploadPhoto?.url,
         },
@@ -74,6 +77,9 @@ const EditUserDetail = ({ data, setEditSectionOpen }) => {
       const response = await axios({
         method: "post",
         url: URL,
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
         data,
         withCredentials: true,
       });
@@ -88,7 +94,7 @@ const EditUserDetail = ({ data, setEditSectionOpen }) => {
     }
   };
   return (
-    <div className="absolute top-0 left-0 bg-gray-700 bg-opacity-40 w-screen h-screen flex justify-center items-center z-20">
+    <div className="absolute top-0 left-0 bg-gray-700 bg-opacity-40 w-screen h-screen flex justify-center items-center z-10">
       <div className="bg-white m-1 rounded p-4 py-5 w-full max-w-xs relative shadow">
         <div className="absolute left-1/2 -translate-x-1/2 top-[-50px] border-[3px]  border-t-white border-l-white   border-r-transparent border-b-transparent rounded-full rotate-45 shadow bg-white">
           <div className="-rotate-45 relative">
