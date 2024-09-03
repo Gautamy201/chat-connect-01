@@ -17,6 +17,7 @@ const HomePage = () => {
   const loction = useLocation();
 
   const user = useSelector((state) => state.user);
+  console.log(user)
 
   const fetchUserDetails = async () => {
     try {
