@@ -6,4 +6,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   envPrefix: "REACT_APP_",
   plugins: [react(), envCompatible()],
+  server: {
+    proxy: {
+      "/api": "https://chat-connect-app.netlify.app/",
+    },
+  },
 });
