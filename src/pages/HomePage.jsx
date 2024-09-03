@@ -26,6 +26,7 @@ const HomePage = () => {
         url: URL,
         withCredentials: true,
       });
+      console.log("fetch user detail => " , response?.data?.data)
       dispatch(setUser(response?.data?.data));
       if (response?.data?.logout) {
         dispatch(logout());
