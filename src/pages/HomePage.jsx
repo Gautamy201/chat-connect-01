@@ -20,14 +20,14 @@ const HomePage = () => {
   console.log(user)
 
   const fetchUserDetails = async () => {
-    const token = {
-      token:localStorage.getItem("token")
-    }
+
     try {
       const URL = `${import.meta.env.REACT_APP_BACKEND_URL}api/user-details`;
       const response = await axios({
         url: URL,
-        token,
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
         withCredentials: true,
       });
       console.log("fetch user detail => " , response?.data?.data)
