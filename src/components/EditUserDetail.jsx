@@ -40,7 +40,7 @@ const EditUserDetail = ({ data, setEditSectionOpen }) => {
       const file = e.target.files[0];
       const uploadPhoto = await uploadFile(file, setUploadedPersecent);
 
-      const URL = `${import.meta.env.REACT_APP_BACKEND_URL}api/update-user`;
+      const URL = `api/update-user`;
       const response = await axios({
         method: "post",
         url: URL,
