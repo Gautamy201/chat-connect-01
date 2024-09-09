@@ -56,7 +56,7 @@ const HomePage = () => {
       },
     });
 
-console.log(socketConnection)
+console.log(socketConection)
 
     socketConection.on("onlineUser", (data) => {
       console.log(data);
